@@ -1,0 +1,359 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: "M PLUS 1", sans-serif;
+}
+
+header {
+    height: 55px;
+    border-bottom: #969696 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(12px);
+}
+
+.headerButton {
+    height: 30px;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+#title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 23px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    color: #464646;
+    overflow: scroll;
+}
+
+#contentsWrapper {
+    margin: 35px 20px 20px 20px;
+}
+
+#title::-webkit-scrollbar {
+    display: none;
+}
+
+#informationWrapper {
+    height: 28px;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+#informationIcon {
+    height: 23px;
+    margin-left: 5px;
+}
+
+#messageWrapper div {
+    overflow: hidden;
+}
+
+#messageWrapper p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    height: 28px;
+    line-height: 28px;
+    color: #545454;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#messageWrapper {
+    height: 28px;
+    margin: 0 10px 2px 10px;
+    overflow: hidden;
+}
+
+.contentsBorder {
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    background-image: linear-gradient(to right, transparent, #ccc 20%, #ccc 80%, transparent);
+}
+
+.busState {
+    position: relative;
+    height: 55px;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #efefef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.destination {
+    position: absolute;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    color: #444444;
+    top: 4px;
+    left: 6px;
+    height: 13px;
+}
+
+.crowd {
+    position: absolute;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    color: #b7b7b7;
+    top: 4px;
+    right: 9px;
+    height: 13px;
+}
+
+#notice {
+    font-size: 9px;
+    color: #969696;
+}
+
+.time {
+    position: absolute;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    color: #444444;
+    left: 6px;
+    top: 17px;
+    height: 13px;
+}
+
+.busStateDetailShowButton {
+    position: absolute;
+    padding: 5px;
+    bottom: 2px;
+    right: 2px;
+    height: 18px;
+    z-index: 10;
+}
+
+.detailBusState {
+    position: relative;
+    height: 225px;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #efefef;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.busDestination {
+    position: absolute;
+    font-size: 13px;
+    padding: 0 0 0 5px;
+    margin: 0;
+    color: #444444;
+    top: 61px;
+    left: 0;
+    height: 22px;
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.busPositionBase {
+    width: calc(10px);
+}
+
+.busPositionWrapper {
+    position: absolute;
+    overflow: scroll;
+    top: 83px;
+    width: calc(100% - 20px);
+    height: 122px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#FrontToJR36 > * > .busPositionBase {
+    width: 915px;
+}
+
+#FrontToJR36 > * > * > .lineMapBorder {
+    position: absolute;
+    bottom: 5px;
+    height: 12px;
+    width: 915px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #b7b7b7;
+}
+
+#FrontToJR36 > * > * > .routeMapBorder {
+    position: absolute;
+    bottom: 5px;
+    left: 338px;
+    height: 12px;
+    width: 305px;
+    margin-right: 300px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #7e7e7e;
+    z-index: 2;
+}
+
+#IntlToJR16 > * > .busPositionBase {
+    width: 790px;
+}
+
+#IntlToJR16 > * > * > .lineMapBorder {
+    position: absolute;
+    bottom: 5px;
+    height: 12px;
+    width: 790px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #b7b7b7;
+}
+
+#IntlToJR16 > * > * > .routeMapBorder {
+    position: absolute;
+    bottom: 5px;
+    left: 247px;
+    height: 12px;
+    width: 553px;
+    margin-right: 300px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #7e7e7e;
+    z-index: 2;
+}
+
+#hkToFront36 > * > .busPositionBase {
+    width: 955px;
+}
+
+#hkToFront36 > * > * > .lineMapBorder {
+    position: absolute;
+    bottom: 5px;
+    height: 12px;
+    width: 955px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #b7b7b7;
+}
+
+#hkToFront36 > * > * > .routeMapBorder {
+    position: absolute;
+    bottom: 5px;
+    left: 421px;
+    height: 12px;
+    width: 546px;
+    margin-right: 300px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #7e7e7e;
+    z-index: 2;
+}
+
+#hkToIntl16 > * > .busPositionBase {
+    width: 790px;
+}
+
+#hkToIntl16 > * > * > .lineMapBorder {
+    position: absolute;
+    bottom: 5px;
+    height: 12px;
+    width: 790px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #b7b7b7;
+}
+
+#hkToIntl16 > * > * > .routeMapBorder {
+    position: absolute;
+    bottom: 5px;
+    left: 420px;
+    height: 12px;
+    width: 380px;
+    margin-right: 300px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #7e7e7e;
+    z-index: 2;
+}
+
+.busStops {
+    display: flex;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.busStops > p {
+    height: 100px;
+    font-size: 12px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-align: right;
+    position: relative;
+    color: #6e6e6e;
+    z-index: 4;
+}
+
+.busStops > img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+.busStops > p::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 9px;
+    width: 9px;
+    bottom: -17px;
+    border-radius: 5px;
+    left: calc(50% - 4px);
+    background-color: #ffffff;
+}
+
+.routeStop {
+    color: #323232 !important;
+}
+
+.thisStop {
+    color: #ff002f !important;
+}
+
+.blinking{
+    -webkit-animation:blink 0.7s ease-in-out infinite alternate;
+    -moz-animation:blink 0.7s ease-in-out infinite alternate;
+    animation:blink 0.7s ease-in-out infinite alternate;
+}
+
+.blinking2{
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    80% {opacity:1;}
+}
+
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    80% {opacity:1;}
+}
+
+@keyframes blink{
+    0% {opacity:0;}
+    80% {opacity:1;}
+}
+

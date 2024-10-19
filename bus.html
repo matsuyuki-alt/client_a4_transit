@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Shindai Transit Info</title>
+    <link rel="stylesheet" href="style/bus.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <script src="script/bus.js"></script>
+    <header>
+        <img class="headerButton" src="resources/arrow_left.png" alt="クリックしてホーム画面に戻る" id="homeButton">
+        <p id="title">SHINDAI HUB Transit</p>
+        <img class="headerButton" src="resources/taxi.png" alt="クリックしてタクシーの交通情報に遷移する" id="taxiButton">
+    </header>
+    <div id="contentsWrapper">
+        <div id="informationWrapper">
+            <img src="resources/notice.png" alt="お知らせのアイコン" id="informationIcon">
+            <div id="messageWrapper">
+                <div><p id="legacyMessage"></p></div>
+                <div><p id="modernMessage"></p></div>
+            </div>
+        </div>
+        <hr class="contentsBorder">
+        <div id="busStatesWrapper">
+            <div class="busState" id="hkToIntl16">
+                <p class="destination">16 阪急六甲から国文研究科前</p>
+                <p class="time blinking">18:21</p>
+                <p class="crowd">混雑: ごくわずか</p>
+                <img src="resources/arrow_button_bottom.png" alt="各バス情報表示を拡大縮小するボタン" class="busStateDetailShowButton">
+                <p class="busDestination">■Next: 16 六甲ケーブル下 行</p>
+                <div class="busPositionWrapper">
+                    <div class="busPositionBase">
+                        <hr class="lineMapBorder">
+                        <hr class="routeMapBorder">
+                        <div class="busStops">
+                            <p>阪神御影</p>
+                            <p>中御影</p>
+                            <p>御影大手筋</p>
+                            <p>御影公会堂前</p>
+                            <p>徳井</p>
+                            <p>灘区役所前<br>（桜口）</p>
+                            <p>JR六甲道</p>
+                            <p>六甲口</p>
+                            <img src="resources/bus.png" alt="バスの現在地を示すバスの画像" class="blinking2">
+                            <p class="routeStop">阪急六甲</p>
+                            <p class="routeStop">楠丘町五丁目</p>
+                            <p class="routeStop">楠丘町三丁目</p>
+                            <p class="routeStop">高羽町</p>
+                            <p class="routeStop">神大国際文化学研究科前</p>
+                            <p class="routeStop">鶴甲南</p>
+                            <p class="routeStop">鶴甲二丁目</p>
+                            <p class="routeStop">鶴甲四丁目</p>
+                            <p class="routeStop">六甲ケーブル下</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="busState" id="hkToFront36">
+                <p class="destination">36 阪急六甲から工学部/正門前</p>
+                <p class="time"><s style="text-decoration: line-through red 2px solid">18:21 </s><span style="color: red">18:24</span><span style="font-size: 13px; color: #a0a0a0"> (3分遅れ)</span> </p>
+                <p class="crowd">混雑: <span style="color: #ff93a1">かなり</span></p>
+                <img src="resources/arrow_button_bottom.png" alt="各バス情報表示を拡大縮小するボタン" class="busStateDetailShowButton">
+                <p class="busDestination">■Next: 36 鶴甲団地 方面</p>
+                <div class="busPositionWrapper">
+                    <div class="busPositionBase">
+                        <hr class="lineMapBorder">
+                        <hr class="routeMapBorder">
+                        <div class="busStops">
+                            <p>阪神御影</p>
+                            <p>中御影</p>
+                            <p>御影大手筋</p>
+                            <p>御影公会堂前</p>
+                            <p>徳井</p>
+                            <p>灘区役所前<br>（桜口）</p>
+                            <p>JR六甲道</p>
+                            <img src="resources/bus.png" alt="バスの現在地を示すバスの画像" class="blinking2">
+                            <p>六甲口</p>
+                            <p class="routeStop">阪急六甲</p>
+                            <p class="routeStop">六甲登山口</p>
+                            <p class="routeStop">六甲台南口</p>
+                            <p class="routeStop">神大文理農学部前</p>
+                            <p class="routeStop">神大本部工学部前</p>
+                            <p class="routeStop">神大正門前</p>
+                            <p class="routeStop">六甲団地前</p>
+                            <p class="routeStop">六甲台</p>
+                            <p class="routeStop">六甲台北</p>
+                            <p class="routeStop">神大人間発達環境学研究科前</p>
+                            <p class="routeStop">鶴甲二丁目</p>
+                            <p class="routeStop">鶴甲団地</p>
+                            <p class="routeStop">鶴甲三丁目</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="busState" id="IntlToJR16">
+                <p class="destination">16 国文研究科前からJR六甲道</p>
+                <p class="time">18:23</p>
+                <p class="crowd">混雑: ごくわずか</p>
+                <img src="resources/arrow_button_bottom.png" alt="各バス情報表示を拡大縮小するボタン" class="busStateDetailShowButton">
+                <p class="busDestination">■Next: 16 阪神御影 行</p>
+                <div class="busPositionWrapper">
+                    <div class="busPositionBase">
+                        <hr class="lineMapBorder">
+                        <hr class="routeMapBorder">
+                        <div class="busStops">
+                            <p>六甲ケーブル下</p>
+                            <p>鶴甲四丁目</p>
+                            <img src="resources/bus.png" alt="バスの現在地を示すバスの画像" class="blinking2">
+                            <p>鶴甲二丁目</p>
+                            <p>鶴甲南</p>
+                            <p class="routeStop">神大国際文化学研究科前</p>
+                            <p class="routeStop">高羽町</p>
+                            <p class="routeStop">楠丘町三丁目</p>
+                            <p class="routeStop">楠丘町五丁目</p>
+                            <p class="routeStop">阪急六甲</p>
+                            <p class="routeStop">六甲口</p>
+                            <p class="routeStop">JR六甲道</p>
+                            <p class="routeStop">灘区役所前<br>（桜口）</p>
+                            <p class="routeStop">徳井</p>
+                            <p class="routeStop">御影公会堂前</p>
+                            <p class="routeStop">御影大手筋</p>
+                            <p class="routeStop">中御影</p>
+                            <p class="routeStop">阪神御影</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="busState" id="FrontToJR36">
+                <p class="destination">36 神大正門前からJR六甲道</p>
+                <p class="time">18:25</p>
+                <p class="crowd">混雑: すこし</p>
+                <img src="resources/arrow_button_bottom.png" alt="各バス情報表示を拡大縮小するボタン" class="busStateDetailShowButton">
+                <p class="busDestination">■Next: 36 JR六甲道 止</p>
+                <div class="busPositionWrapper">
+                    <div class="busPositionBase">
+                        <hr class="lineMapBorder">
+                        <hr class="routeMapBorder">
+                        <div class="busStops">
+                            <p>鶴甲団地</p>
+                            <p>鶴甲三丁目</p>
+                            <img src="resources/bus.png" alt="バスの現在地を示すバスの画像" class="blinking2">
+                            <p>神大人間発達環境学研究科前</p>
+                            <p>六甲台北</p>
+                            <p>六甲台</p>
+                            <p>六甲団地前</p>
+                            <p class="routeStop">神大正門前</p>
+                            <p class="routeStop">神大本部工学部前</p>
+                            <p class="routeStop">神大文理農学部前</p>
+                            <p class="routeStop">六甲台南口</p>
+                            <p class="routeStop">六甲登山口</p>
+                            <p class="routeStop">阪急六甲</p>
+                            <p class="routeStop">六甲口</p>
+                            <p class="routeStop">JR六甲道</p>
+                            <p>灘区役所前<br>（桜口）</p>
+                            <p>徳井</p>
+                            <p>御影公会堂前</p>
+                            <p>御影大手筋</p>
+                            <p>中御影</p>
+                            <p>阪神御影</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="contentsBorder">
+        <p id="notice">※混雑状況などの情報は第三者が独自に調査し、提供しているものです。<br>お問い合わせは、SHINDAI HUBお問い合わせフォームまでお願いします。（神戸市バスには問い合わせなさらないように願います。）</p>
+    </div>
+</body>
+</html>

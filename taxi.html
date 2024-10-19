@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Shindai Transit Info</title>
+    <link rel="stylesheet" href="style/taxi.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <script src="script/taxi.js"></script>
+    <header>
+        <img class="headerButton" src="resources/arrow_left.png" alt="クリックしてホーム画面に戻る" id="homeButton">
+        <p id="title">SHINDAI HUB Transit</p>
+        <img class="headerButton" src="resources/bus2.png" alt="クリックしてバスの交通情報に遷移する" id="busButton">
+    </header>
+    <div id="contentsWrapper">
+        <div id="informationWrapper">
+            <img src="resources/notice.png" alt="お知らせのアイコン" id="informationIcon">
+            <div id="messageWrapper">
+                <div><p id="legacyMessage"></p></div>
+                <div><p id="modernMessage"></p></div>
+            </div>
+        </div>
+        <hr class="contentsBorder">
+        <p style="text-align: center; margin: 0">現在地からの混雑状況</p>
+        <p style="text-align: center; margin: 0;">バス: <span style="color: red;">かなり</span> タクシー: 少々</p>
+        <hr class="contentsBorder">
+        <div id="busStatesWrapper">
+            <div class="busState">
+                <p class="destination">阪急六甲駅から神戸大学正門</p>
+                <p class="time blinking" style="color: red">あと1人</p>
+                <p class="crowd">目安料金: 220円</p>
+                <a href="" class="btn btn--red1 btn--cubic">相乗りする</a>
+            </div>
+            <div class="busState">
+                <p class="destination">阪急六甲駅から鶴甲第一</p>
+                <p class="time">あと3人</p>
+                <p class="crowd">目安料金: 230円</p>
+                <a href="" class="btn btn--red1 btn--cubic">相乗りする</a>
+            </div>
+            <div class="buttons">
+                <a href="" class="btn btn--blue btn--cubic">🔍現在地から再検索</a>
+                <a href="" class="btn btn--red2 btn--cubic">＋新しく募集</a>
+            </div>
+        </div>
+        <hr class="contentsBorder">
+        <p id="notice">※混雑状況などの情報は第三者が独自に調査し、提供しているものです。<br>お問い合わせは、SHINDAI HUBお問い合わせフォームまでお願いします。</p>
+    </div>
+</body>
+</html>

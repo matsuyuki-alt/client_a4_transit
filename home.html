@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Shindai Transit Info</title>
+    <link rel="stylesheet" href="style/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <script src="script/bus.js"></script>
+    <header>
+        <p id="title">SHINDAI HUB Transit</p>
+    </header>
+    <div id="contentsWrapper">
+        <div id="busStatesWrapper">
+            <div class="busState" id="hkToIntl16">
+                <p class="destination">16 阪急六甲から国文研究科前</p>
+                <p class="time blinking">18:21</p>
+                <p class="crowd">混雑: ごくわずか</p>
+            </div>
+            <div class="busState" id="hkToFront36">
+                <p class="destination">36 阪急六甲から工学部/正門前</p>
+                <p class="time"><s style="text-decoration: line-through red 2px solid">18:21 </s><span style="color: red">18:24</span><span style="font-size: 13px; color: #a0a0a0"> (3分遅れ)</span> </p>
+                <p class="crowd">混雑: <span style="color: #ff93a1">かなり</span></p>
+            </div>
+        </div>
+        <a href="bus.html" class="btn_12">バスの混雑予想へ移動</a>
+        <hr class="contentsBorder">
+        <div class="busState">
+            <p class="destination">阪急六甲駅から神戸大学正門</p>
+            <p class="time blinking" style="color: #0033ff">あと1人</p>
+            <p class="crowd">目安料金: 220円</p>
+        </div>
+        <div class="busState">
+            <p class="destination">阪急六甲駅から鶴甲第一キャンパス</p>
+            <p class="time">あと3人</p>
+            <p class="crowd">目安料金: 230円</p>
+        </div>
+        <a href="taxi.html" class="btn_13">タクシー相乗りへ移動</a>
+        <hr class="contentsBorder">
+        <p id="notice">※混雑状況などの情報は第三者が独自に調査し、提供しているものです。<br>お問い合わせは、SHINDAI HUBお問い合わせフォームまでお願いします。</p>
+    </div>
+</body>
+</html>
