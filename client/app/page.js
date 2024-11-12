@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
-import React,{ useRef } from "react";
+import React,{ useEffect, useRef } from "react";
+import io from "socket.io-client"
+
+const socket = io("")//後で調整
 
 function Bus() {
   return (
@@ -12,7 +15,7 @@ function Bus() {
 
 function Template(id, start, goal, time, crowd, busPosition) {
   const busInfoRef = useRef(null);  // busInfo要素への参照を保持
-
+  
   const handleButtonClick = () => {
     if (busInfoRef.current) {
       // 要素の表示・非表示をトグルする
@@ -98,6 +101,18 @@ function Template(id, start, goal, time, crowd, busPosition) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    // サーバーからデータを取得
+    socket.emit("requestBusData"); // サーバーにデータリクエスト
+    socket.on("busData", (data) => {
+      setBusData(data); // 受け取ったデータを状態に保存
+    });
+
+    // クリーンアップ
+    return () => {
+      socket.off("busData");
+    };
+  }, []);
   return (
   <div style={{ backgroundColor: "#f8f9fa", fontFamily: "'M PLUS 1', sans-serif", margin: 0 }}>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500;600;700;900&display=swap" rel="stylesheet"></link> 
